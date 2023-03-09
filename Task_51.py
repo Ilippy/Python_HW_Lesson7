@@ -18,7 +18,7 @@
 # Вывод:
 # same
 
-def same_by(characteristic, objects):
+def same_by(characteristic: callable, objects: list[int]) -> bool:
     return not list(filter(characteristic, objects))
 
 

@@ -18,7 +18,6 @@ def same_of(lst: list[str]) -> bool:
 
 
 def count_vowerls(s: str) -> int:
-    print(type(s))
     count_v = 0
     vowerls = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
     for letter in s.lower():
@@ -27,7 +26,7 @@ def count_vowerls(s: str) -> int:
     return count_v
 
 
-words = "пара-ра-рам рам-пам-папам па-ра-па-дам".split()
+words = input("Введите стихотворение \n").split() # "пара-ра-рам рам-пам-папам па-ра-па-дам".split()
 if same_of(words):
     print('Парам пам-пам')
 else:
