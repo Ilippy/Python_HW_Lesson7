@@ -13,11 +13,21 @@
 # Вывод:
 # Парам пам-пам
 
-def same_of(lst):
-    return not list(filter(lambda x: x.count('а') % 2, lst)) 
+def same_of(lst: list[str]) -> bool:
+    return not list(filter(lambda x: count_vowerls(x) % 2, lst)) 
+
+
+def count_vowerls(s: str) -> int:
+    print(type(s))
+    count_v = 0
+    vowerls = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
+    for letter in s.lower():
+        if letter in vowerls:
+            count_v += 1
+    return count_v
+
 
 words = "пара-ра-рам рам-пам-папам па-ра-па-дам".split()
-# vowerls = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
 if same_of(words):
     print('Парам пам-пам')
 else:
