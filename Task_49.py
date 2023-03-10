@@ -33,6 +33,9 @@
 #     return lst[result.index(max(result))]
 
 
+# def find_farthest_orbit(lst: list[tuple]):
+#     return max(lst, key= lambda y: (y[0] != y[1], y[0] * y[1]))
+
 find_farthest_orbit = lambda x: max(x, key= lambda y: (y[0] != y[1], y[0] * y[1]))
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]

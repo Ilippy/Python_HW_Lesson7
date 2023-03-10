@@ -14,16 +14,7 @@
 # Парам пам-пам
 
 def same_of(lst: list[str]) -> bool:
-    return not list(filter(lambda x: count_vowerls(x) % 2, lst)) 
-
-
-def count_vowerls(s: str) -> int:
-    count_v = 0
-    vowerls = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
-    for letter in s.lower():
-        if letter in vowerls:
-            count_v += 1
-    return count_v
+    return len(set(map(lambda x: sum([i in ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"] for i in x]), lst))) == 1
 
 
 words = input("Введите стихотворение \n").split() # "пара-ра-рам рам-пам-папам па-ра-па-дам".split()

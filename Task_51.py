@@ -19,7 +19,7 @@
 # same
 
 def same_by(characteristic: callable, objects: list[int]) -> bool:
-    return not list(filter(characteristic, objects))
+    return len(set(map(characteristic, objects))) == 1
 
 
 values = [0, 2, 10, 6]
